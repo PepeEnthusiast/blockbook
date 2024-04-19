@@ -22,7 +22,7 @@
         "package_name": "backend-pepecoin",
         "package_revision": "satoshilabs-1",
         "system_user": "pepecoin",
-        "version": "1.14.7",
+        "version": "1.0.0",
         "binary_url": "https://github.com/pepecoinppc/pepecoin/releases/download/v1.0.0/pepecoin-1.0.0-x86_64-linux-gnu.tar.gz",
         "verification_type": "sha256",
         "verification_source": "90900d9774b60280c5e9e0b75d3e1d566fd2040906a2bf2bc0a2b2c0a9f38e3a",
