@@ -22,10 +22,10 @@
         "package_name": "backend-pepecoin",
         "package_revision": "satoshilabs-1",
         "system_user": "pepecoin",
-        "version": "1.0.0",
-        "binary_url": "https://github.com/pepecoinppc/pepecoin/releases/download/v1.0.0/pepecoin-1.0.0-x86_64-linux-gnu.tar.gz",
+        "version": "1.0.1",
+        "binary_url": "https://github.com/pepecoinppc/pepecoin/releases/download/v1.0.1/pepecoin-1.0.1-x86_64-linux-gnu.tar.gz",
         "verification_type": "sha256",
-        "verification_source": "90900d9774b60280c5e9e0b75d3e1d566fd2040906a2bf2bc0a2b2c0a9f38e3a",
+        "verification_source": "6eb154246531a2a25d8ee0721d6df860f75842ecfcb63b6b481cb882c3212087",
         "extract_command": "tar -C backend --strip 1 -xf",
         "exclude_files": ["bin/pepecoin-qt"],
         "exec_command_template": "{{.Env.BackendInstallPath}}/{{.Coin.Alias}}/bin/pepecoind -datadir={{.Env.BackendDataPath}}/{{.Coin.Alias}}/backend -conf={{.Env.BackendInstallPath}}/{{.Coin.Alias}}/{{.Coin.Alias}}.conf -pid=/run/{{.Coin.Alias}}/{{.Coin.Alias}}.pid",
@@ -45,8 +45,8 @@
         },
         "platforms": {
             "arm64": {
-                "binary_url": "https://github.com/pepecoinppc/pepecoin/releases/download/v1.0.0/pepecoin-1.0.0-aarch64-linux-gnu.tar.gz",
-                "verification_source": "bf1a40876a90d3f2d7ad907e952b96d7ebf712e7a27f7255ecb84e0dce2b789d",
+                "binary_url": "https://github.com/pepecoinppc/pepecoin/releases/download/v1.0.1/pepecoin-1.0.1-aarch64-linux-gnu.tar.gz",
+                "verification_source": "35f1d61bad10e78813c52c8e5f971feb5ca362a6c30c596c04d39d741f5426ef",
                 "exclude_files": []
             }
         }
