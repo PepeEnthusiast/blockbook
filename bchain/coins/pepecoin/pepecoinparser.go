@@ -13,7 +13,7 @@ import (
 // magic numbers
 const (
 	MainnetMagic wire.BitcoinNet = 0xc0a0f0e0
-	TestnetMagic wire.BitcoinNet = 0xfcc1b7dc // See https://github.com/dogecoin/dogecoin/blob/f80bfe9068ac1a0619d48dad0d268894d926941e/qa/rpc-tests/test_framework/mininode.py#L1620
+	TestnetMagic wire.BitcoinNet = 0xfec1dbcc // See https://github.com/dogecoin/dogecoin/blob/f80bfe9068ac1a0619d48dad0d268894d926941e/qa/rpc-tests/test_framework/mininode.py#L1620
 )
 
 // chain parameters
@@ -28,8 +28,8 @@ func init() {
 	MainNetParams.PubKeyHashAddrID = []byte{56}
 	MainNetParams.ScriptHashAddrID = []byte{22}
 
-	TestNetParams = chaincfg.TestNet3Params // TODO pepecoin testnet
-	TestNetParams.Net = TestnetMagic 		// TODO pepecoin testnet
+	TestNetParams = chaincfg.TestNet3Params
+	TestNetParams.Net = TestnetMagic
 	TestNetParams.PubKeyHashAddrID = []byte{113} // See https://github.com/dogecoin/dogecoin/blob/f80bfe9068ac1a0619d48dad0d268894d926941e/contrib/testgen/gen_base58_test_vectors.py#L23
 	TestNetParams.ScriptHashAddrID = []byte{196} // See https://github.com/dogecoin/dogecoin/blob/f80bfe9068ac1a0619d48dad0d268894d926941e/contrib/testgen/gen_base58_test_vectors.py#L24
 }

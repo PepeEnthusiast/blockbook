@@ -1,15 +1,15 @@
 {
     "coin": {
-        "name": "Pepecoin",
-        "shortcut": "PEPE",
-        "label": "Pepecoin",
-        "alias": "pepecoin"
+        "name": "Pepecoin Testnet",
+        "shortcut": "PEPETEST",
+        "label": "Pepecoin Testnet",
+        "alias": "pepecoin_testnet"
     },
     "ports": {
-        "backend_rpc": 8038,
-        "backend_message_queue": 38338,
-        "blockbook_internal": 9038,
-        "blockbook_public": 9138
+        "backend_rpc": 7038,
+        "backend_message_queue": 37338,
+        "blockbook_internal": 8038,
+        "blockbook_public": 8138
     },
     "ipc": {
         "rpc_url_template": "http://127.0.0.1:{{.Ports.BackendRPC}}",
@@ -19,7 +19,7 @@
         "message_queue_binding_template": "tcp://127.0.0.1:{{.Ports.BackendMessageQueue}}"
     },
     "backend": {
-        "package_name": "backend-pepecoin",
+        "package_name": "backend-pepecoin-testnet",
         "package_revision": "satoshilabs-1",
         "system_user": "pepecoin",
         "version": "1.0.1",
@@ -34,7 +34,7 @@
         "service_type": "forking",
         "service_additional_params_template": "",
         "protect_memory": false,
-        "mainnet": true,
+        "mainnet": false,
         "server_config_file": "bitcoin_like.conf",
         "client_config_file": "bitcoin_like_client.conf",
         "additional_params": {
@@ -52,7 +52,7 @@
         }
     },
     "blockbook": {
-        "package_name": "blockbook-pepecoin",
+        "package_name": "blockbook-pepecoin-testnet",
         "system_user": "blockbook-pepecoin",
         "internal_binding_template": ":{{.Ports.BlockbookInternal}}",
         "public_binding_template": ":{{.Ports.BlockbookPublic}}",
@@ -63,13 +63,9 @@
             "mempool_workers": 8,
             "mempool_sub_workers": 2,
             "block_addresses_to_keep": 300,
-            "xpub_magic": 49990397,
-            "slip44": 3434,
-            "additional_params": {
-                "fiat_rates": "coingecko",
-                "fiat_rates_vs_currencies": "USD",
-                "fiat_rates_params": "{\"coin\": \"pepecoin-network\", \"periodSeconds\": 900}"
-            }
+            "xpub_magic": 70617039,
+            "slip44": 1,
+            "additional_params": {}
         }
     },
     "meta": {
