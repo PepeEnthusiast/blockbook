@@ -28,7 +28,7 @@
         "verification_source": "6eb154246531a2a25d8ee0721d6df860f75842ecfcb63b6b481cb882c3212087",
         "extract_command": "tar -C backend --strip 1 -xf",
         "exclude_files": ["bin/pepecoin-qt"],
-        "exec_command_template": "{{.Env.BackendInstallPath}}/{{.Coin.Alias}}/bin/dogecoind -datadir={{.Env.BackendDataPath}}/{{.Coin.Alias}}/backend -conf={{.Env.BackendInstallPath}}/{{.Coin.Alias}}/{{.Coin.Alias}}.conf -pid=/run/{{.Coin.Alias}}/{{.Coin.Alias}}.pid -rest",
+        "exec_command_template": "{{.Env.BackendInstallPath}}/{{.Coin.Alias}}/bin/pepecoind -datadir={{.Env.BackendDataPath}}/{{.Coin.Alias}}/backend -conf={{.Env.BackendInstallPath}}/{{.Coin.Alias}}/{{.Coin.Alias}}.conf -pid=/run/{{.Coin.Alias}}/{{.Coin.Alias}}.pid -rest",
         "logrotate_files_template": "{{.Env.BackendDataPath}}/{{.Coin.Alias}}/backend/*.log",
         "postinst_script_template": "",
         "service_type": "forking",
